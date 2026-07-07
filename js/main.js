@@ -97,6 +97,37 @@
   }
 
   /* ---------------------------------------------------------------
+     2b. Mobile burger menu
+  --------------------------------------------------------------- */
+  function initMobileNav() {
+    var toggle = document.querySelector(".nav-toggle");
+    var nav = document.getElementById("mobile-nav");
+    if (!toggle || !nav) return;
+
+    function close() {
+      nav.hidden = true;
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open menu");
+    }
+    function open() {
+      nav.hidden = false;
+      toggle.setAttribute("aria-expanded", "true");
+      toggle.setAttribute("aria-label", "Close menu");
+    }
+    toggle.addEventListener("click", function () {
+      if (nav.hidden) open(); else close();
+    });
+    // Close after tapping a link.
+    nav.addEventListener("click", function (e) {
+      if (e.target.closest("a")) close();
+    });
+    // Close on Escape.
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !nav.hidden) { close(); toggle.focus(); }
+    });
+  }
+
+  /* ---------------------------------------------------------------
      3. Gallery carousel (scroll-snap + arrows + dots)
   --------------------------------------------------------------- */
   function initGallery() {
@@ -304,6 +335,7 @@
   function boot() {
     applyHeadline();
     initHeader();
+    initMobileNav();
     initGallery();
     initFaq();
     initReveal();

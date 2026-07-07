@@ -185,10 +185,37 @@ ul { margin: 0; padding: 0; list-style: none; }
 .header-phone:hover { color: var(--primary-800); }
 .header-actions .btn { padding: 0.7rem 1.15rem; font-size: var(--text-sm); }
 
+/* Burger menu (mobile only) */
+.nav-toggle {
+  display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px;
+  border: 1px solid var(--border-default); background: var(--white); color: var(--primary-900);
+  border-radius: var(--radius-md); cursor: pointer; padding: 0;
+  transition: background var(--dur-base) var(--ease-standard), border-color var(--dur-base) var(--ease-standard);
+}
+.nav-toggle:hover { background: var(--primary-50); border-color: var(--brand-primary); }
+.nav-toggle svg { width: 24px; height: 24px; }
+.header-cta { display: none; }
+
+.mobile-nav {
+  display: flex; flex-direction: column; gap: 0.25rem;
+  padding: 0.75rem var(--container-pad) 1rem;
+  background: var(--white); border-top: 1px solid var(--border-subtle); box-shadow: var(--shadow-md);
+}
+.mobile-nav[hidden] { display: none; }
+.mobile-nav a:not(.btn) {
+  padding: 0.85rem 0.5rem; font-size: var(--text-body-lg); font-weight: var(--fw-semibold);
+  color: var(--primary-900); border-bottom: 1px solid var(--border-subtle);
+}
+.mobile-nav a:not(.btn):hover { color: var(--brand-primary); }
+.mobile-nav__cta { margin-top: 0.85rem; }
+
 @media (min-width: 780px) {
   .brand img { height: 40px; }
   .header-phone { display: inline-flex; }
   .header-actions .btn { padding: 0.8rem 1.4rem; font-size: var(--text-base); }
+  .nav-toggle { display: none; }
+  .header-cta { display: inline-flex; }
+  .mobile-nav { display: none !important; }
 }
 
 /* ---------- Hero ---------- */
@@ -201,7 +228,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   content: ""; position: absolute; inset: 0; z-index: -1;
   background: linear-gradient(180deg, rgba(30,61,84,0.82) 0%, rgba(30,61,84,0.68) 45%, rgba(30,61,84,0.90) 100%);
 }
-.hero-inner { padding-block: clamp(3rem, 9vw, 6rem); max-width: 680px; }
+.hero-inner { padding-block: clamp(3rem, 9vw, 6rem); max-width: 640px; margin-inline: 0; }
 .hero .eyebrow { color: var(--brand-accent); }
 .hero h1 {
   color: var(--white); font-size: var(--text-display); margin: 0 0 1.1rem;

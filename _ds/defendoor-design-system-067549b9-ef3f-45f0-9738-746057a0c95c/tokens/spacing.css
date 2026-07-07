@@ -1,0 +1,41 @@
+:root {
+  /* ============ SPACING SCALE (4px base) ============ */
+  --space-1: 0.25rem;   /* 4 */
+  --space-2: 0.5rem;    /* 8 */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.5rem;    /* 24 */
+  --space-6: 2rem;      /* 32 */
+  --space-7: 3rem;      /* 48 */
+  --space-8: 4rem;      /* 64 */
+  --space-9: 6rem;      /* 96 */
+  --space-section: 5.5rem;  /* vertical rhythm between landing sections */
+
+  /* ============ CONTAINER ============ */
+  --container-max: 1180px;
+  --container-pad: 1.5rem;
+
+  /* ============ RADII ============ */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;     /* cards — matches the soft rounded cards of the reference */
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ============ BORDERS ============ */
+  --border-width: 1px;  /* @kind spacing */
+
+  /* ============ SHADOWS (soft, cool-tinted) ============ */
+  --shadow-xs: 0 1px 2px rgba(30, 61, 84, 0.06);
+  --shadow-sm: 0 2px 6px rgba(30, 61, 84, 0.08);
+  --shadow-md: 0 8px 24px rgba(30, 61, 84, 0.10);
+  --shadow-lg: 0 18px 48px rgba(30, 61, 84, 0.14);
+  --shadow-cta: 0 8px 20px rgba(56, 188, 133, 0.32);
+
+  /* ============ MOTION ============ */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);  /* @kind other */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);      /* @kind other */
+  --dur-fast: 120ms;   /* @kind other */
+  --dur-base: 220ms;   /* @kind other */
+  --dur-slow: 420ms;   /* @kind other */
+}

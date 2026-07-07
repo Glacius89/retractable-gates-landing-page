@@ -1,0 +1,74 @@
+:root {
+  /* ============ BRAND PALETTE (exact hex from brand spec) ============ */
+  --brand-primary: #3d7ca9;      /* trustworthy steel blue — headings, links, primary chrome */
+  --brand-secondary: #199494;    /* teal — secondary accents, section eyebrows */
+  --brand-tertiary: #778087;     /* cool grey — body-adjacent, muted UI */
+  --brand-cta: #38bc85;          /* action green — CTA buttons only */
+  --brand-accent: #c7e0f1;       /* pale sky blue — soft fills, card backgrounds, borders */
+
+  /* Tint & shade ramps derived from the brand hues (oklch-harmonised) */
+  --primary-900: #1e3d54;
+  --primary-800: #2a5678;
+  --primary-700: #33698f;
+  --primary-600: #3d7ca9;        /* = --brand-primary */
+  --primary-500: #5591bb;
+  --primary-400: #7cabce;
+  --primary-300: #a6c8e0;
+  --primary-200: #c7e0f1;        /* = --brand-accent */
+  --primary-100: #e3f0f9;
+  --primary-50:  #f2f8fc;
+
+  --cta-700: #229163;
+  --cta-600: #2ba674;
+  --cta-500: #38bc85;            /* = --brand-cta */
+  --cta-400: #5fcc9d;
+  --cta-300: #8bdbb8;
+
+  --teal-700: #0f6b6b;
+  --teal-600: #147f7f;
+  --teal-500: #199494;           /* = --brand-secondary */
+
+  /* ============ NEUTRALS ============ */
+  --neutral-900: #1a2026;
+  --neutral-800: #2b333b;
+  --neutral-700: #414a52;
+  --neutral-600: #576069;
+  --neutral-500: #778087;        /* = --brand-tertiary */
+  --neutral-400: #9aa2a8;
+  --neutral-300: #c3c9cd;
+  --neutral-200: #e0e4e7;
+  --neutral-100: #eef1f3;
+  --neutral-50:  #f7f9fa;
+  --white: #ffffff;
+
+  /* ============ SEMANTIC ALIASES ============ */
+  --text-heading: var(--primary-900);
+  --text-body: var(--neutral-700);
+  --text-muted: var(--neutral-500);
+  --text-inverse: var(--white);
+  --text-link: var(--brand-primary);
+  --text-link-hover: var(--primary-800);
+
+  --surface-page: var(--white);
+  --surface-subtle: var(--primary-50);
+  --surface-card: var(--white);
+  --surface-accent: var(--primary-100);
+  --surface-dark: var(--primary-900);      /* dark bands, like the fintech reference */
+  --surface-dark-alt: var(--primary-800);
+
+  --border-subtle: var(--neutral-200);
+  --border-default: var(--neutral-300);
+  --border-accent: var(--brand-accent);
+
+  --action-primary: var(--brand-cta);
+  --action-primary-hover: var(--cta-600);
+  --action-primary-active: var(--cta-700);
+  --action-secondary: var(--brand-primary);
+  --action-secondary-hover: var(--primary-700);
+
+  /* status */
+  --success: var(--brand-cta);
+  --danger: #d6453c;
+  --warning: #e2a531;
+  --focus-ring: color-mix(in srgb, var(--brand-primary) 55%, transparent);
+}
